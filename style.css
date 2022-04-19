@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+
+html {
+    height: 100%;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-areas: 
+    "header main";
+}
+
+header {
+    grid-area: header;
+    grid-template-rows: 1fr 5fr;
+    background-color: #FAFAFA;
+    border-right: 1px solid rgb(87, 87, 87);
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    grid-area: main;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+#nav-projects > h2 {
+    font-size: medium;
+    padding-bottom: 20px;
+}
+
+
+li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+nav>div>ul>li:hover {
+    cursor: pointer;
+}
+
+header > h1 {
+    font-weight: 400;
+    color: rgb(61, 94, 167);
+    font-family: 'Monoton', cursive;
+    font-size: 2.2rem;
+    padding: 20px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: auto;
+    padding-top: 40px;
+}
+
+
+
+nav {
+    margin: 20px;
+    display: grid;
+    align-self: center;
+    gap: 50px;
+}
+
+
+
+#form-new-project {
+    display: flex;
+    gap: 10px;
+}
+
+#form-new-project > input{
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: #FAFAFA;
+    width: 100%;
+}
+
+#form-new-project > button {
+    border: none;
+    background: none;
+    font-size: larger;
+}
+
+#form-new-project > button:hover {
+    cursor: pointer;
+}
+
+nav > div {
+    width: fit-content;
+}
+
+.todo-item {
+    min-height: 50px;
+    height: fit-content;
+    border-bottom: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 5fr 4fr 0.5fr 0.5fr;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.todo-item > button {
+    border: none;
+    background: none;
+    font-size: larger;
+    align-self: center;
+}
+
+input:checked ~ span {
+    text-decoration: line-through;
+}
+
+li[data-text="bold"] {
+    font-weight: bold;
+    color:rgb(61, 94, 167);
+}
+
+.visible {  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(126, 158, 216);
+    width: 30%;
+    border: 2px solid black;
+    border-radius: 15px;
+    align-items: center;
+    justify-self: center;
+    align-content: center;
+    padding: 20px;
+    gap: 5px;
+}
+
+
+
+#new-todo-form > label {
+  margin: 3%; 
+}
+
+#new-todo-form > input, select {
+    width: 80%;
+    height: 5%;
+    height: 3rem;
+}
+
+#add-todo-button {
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid black;
+    background: white;
+    margin-top: 5%;
+}
+
+#close-button {
+    width: 25px;
+    height: 25px;
+    font-size: 20px;
+    border-radius: 50%;
+    border: none;
+    background: none;
+    align-self: flex-end;
+    color:white;
+}
+
+.todo-item > div {
+    font-size: xx-large;
+}
+
+#new-todo-form > button:hover{
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+.todo-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo-header > button {
+    background: none;
+    padding: 5px;
+    border: 2px solid rgb(61, 94, 167);
+    border-radius: 10px;
+}
+
+#weava-permanent-marker, #weava-ui-wrapper {
+    display: none;
+}
+
+.todo-list {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.todo-item > span {
+    width: fit-content;
+    font-size: smaller;
+}
+
+section {
+    display: flex;
+}
+
+dl {
+    padding: 20px;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas: 
+    "description-title project-title"
+    "description-description project-description";
+    gap: 30px;
+    width: 100%;
+}
+
+dt {
+    font-weight: bold;
+    border-bottom: 1px solid grey;
+    font-size: smaller
+}
+
+dd {
+    height: min-content;
+    font-size: smaller;
+}
+
+#description-title {
+    grid-area: description-title;
+}
+
+#project-title {
+    grid-area: project-title;
+}
+
+#description-description {
+    grid-area: description-description;
+}
+
+#project-description{
+    grid-area: project-description;
+}
+
+.todo-body {
+    display: flex;
+    flex-direction: column;
+}

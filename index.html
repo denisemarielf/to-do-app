@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    
+    <title>To-do</title>
+</head>
+<body>
+    <header>
+        <h1>TO-DO APP </h1>
+
+        <nav>
+        <div id="nav-calendar">
+            <ul>
+                
+                <li class="calendar-list" data-text="bold">Today</li>
+                <li class="calendar-list">Week</li>
+                <li class="calendar-list">Month</li>
+                <li class="calendar-list">All</li>
+            </ul>
+        </div>   
+        <div id="nav-projects">
+            <h2>Projects</h2>
+            <ul id="project-list">
+            </ul>
+            <form id="form-new-project" action="">
+                <input type="text" name="" id="new-project" placeholder="new project" required>
+                <button id="add-projects-button">➕</button>
+            </form>
+        </div>
+        </nav>
+    </header>
+    <main>
+        <div class="todo-list">
+            <div class="todo-header">
+                <h2 id="main-title">Today</h2>
+                <button class="todo-button">New todo</button>
+            </div>
+            <div class="todo-body">
+            </div>
+            <form id="new-todo-form" class="hidden" action="">
+                <button type="button" id="close-button">❌</button>
+                <label for="">Title:</label>
+                <input type="text" name="" id="new-todo-title" placeholder="add new to-do" required/>
+                <label for="">Description:</label>
+                <input type="text" name="" id="new-todo-description" placeholder="add description" required/>
+                <label for="">Priority:</label>
+                <select id="new-todo-priority" required>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+                <label for="">Due date:</label>
+                <input type="date" name="" id="new-todo-date" required/>
+                <label for="">Project:</label>
+                <select name="" id="new-todo-project-selection" required>
+                </select>
+                <button type="submit" id="add-todo-button">+</button>
+            </form>
+        </div>  
+    </main>
+</body>
+</html>
